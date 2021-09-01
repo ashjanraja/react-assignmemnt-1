@@ -1,4 +1,4 @@
-const userInfo = () => {
+const UserInfo = () => {
   const posts = [
     {
       userId: 1,
@@ -843,11 +843,35 @@ const userInfo = () => {
     },
   ];
 
-    return(
-        <div>
-            {users.map((,) =>{
-
+  return (
+    <div>
+      {users.map((info, i) => {
+        return (
+          <div key={i}>
+            <p>
+              <strong>Name: </strong>
+              {info.name} <br></br>
+              <strong>Email: </strong>
+              {info.email}
+            </p>
+            {posts.map((data, j) => {
+              if (data.userId === info.id) {
+                return (
+                  <div key={j}>
+                    <p>
+                      <strong>Title: </strong>
+                      {data.title} <br></br> <strong>Body: </strong>
+                      {data.body}
+                    </p>
+                  </div>
+                );
+              }
             })}
-        </div>
-    );
+            <hr ></hr>
+          </div>
+        );
+      })}
+    </div>
+  );
 };
+export default UserInfo;

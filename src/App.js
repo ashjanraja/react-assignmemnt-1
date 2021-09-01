@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import * as UserCommponent from "./react-assignment";
+import UserInfo from './post';
 function App() {
   return (
     <div className="App">
@@ -22,6 +23,8 @@ function App() {
       <UserCommponent.compo5 />
 
       <hr />
+      <UserInfo />
+    
      
     </div>
   );

@@ -1,7 +1,10 @@
 .App {
-  text-align: center;
+  text-align:left;
+  margin-left: 80px;
 }
-
+hr{
+  color: purple;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
